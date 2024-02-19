@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Listado Coches</title>
+        <link rel="stylesheet" href="/css/estilos2.css">
+    </head>
+    <body>
+        <table>
+            <caption>Listado de coches</caption>
+            <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Coches</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="marca : ${listaMarcas}">
+                    <td th:text="${marca.marca}"></td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Modelo</th>
+                                    <th>Caballos</th>
+                                    <th>Imagen</th>
+                                    <th>Foto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="coche : ${marca.coches}">
+                                    <td th:text="${coche.modelo}"></td>
+                                    <td th:text="${coche.caballos}"></td>
+                                    <td id="disco"><img th:src="@{/img/{img} (img = ${coche.imagen})}"/></td>
+                                    <td id="blob"><img th:src="@{'/' + ${coche.id} + '/foto'}"/> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

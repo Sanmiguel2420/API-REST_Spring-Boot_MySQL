@@ -1,0 +1,49 @@
+table {
+    border-collapse: collapse;
+    margin: 0 auto; /* Centrar horizontalmente sobre la página */
+    margin-top: 1em;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    box-shadow: 0.5em 1em 2em black;
+}
+table th {
+    background-color: #278dbc;
+    color:#fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0.5em;
+}
+table td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+table tr:nth-child(odd){
+/*para los colores de las filas impares*/
+    background-color: #ffffff;
+}
+table tr:nth-child(even){
+/*para los colores de las filas pares*/
+    background:#EDEDED;
+}
+
+caption {
+    font-weight: bold;
+    color: blue;
+    font-size: 2em;
+    margin-bottom: 0.8em;
+}
+
+table td#disco, table td#blob {
+    width: 100px;
+}
+
+table td img {
+    width: 100%;
+
+}
+
+h1 {
+    color: blue;
+}
